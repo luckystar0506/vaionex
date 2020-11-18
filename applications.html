@@ -123,13 +123,12 @@
                     <br>
                     <br>
                     <div class="payment_img">
-                        <img src="img/new/SatolearnLaptop.png" alt="">
-                        <div></div>
-                        <img class="payment_icon icon_one" src="img/new/Group 8.png" alt="" style="width: 15%; margin-left: 80px; margin-top: 50px;">
-                        <img class="payment_icon icon_two" src="img/new/Satolearn.png" alt="" style="width: 15%; margin-top: 100px; margin-left: 40px;">
-                        <img class="payment_icon icon_four" src="img/new/Blockcodes.png" alt="" style="width: 13%; margin-top: 40px; margin-right: 80px;">
-                        <img class="payment_icon icon_five" src="img/new/Raspora.png" alt="" style="width:12%; margin-right:100px; margin-top: 20px;">
-                        <img class="payment_icon icon_six" src="img/new/Group 9.png" alt="" style="width:15%; margin-top: 75px; margin-right: 50px;">
+                        <img id="laptopView" src="img/new/laptop_two.png" alt="">
+                        <a href="" class="apiLink"><img class="payment_icon icon_one" src="img/new/Group 8.png" alt="" style="width: 15%; margin-left: 80px; margin-top: 50px;"></a>
+                        <a href="" class="satoLink"><img class="payment_icon icon_two" src="img/new/Satolearn.png" alt="" style="width: 15%; margin-top: 100px; margin-left: 40px;"></a>
+                        <a href="" class="blockLink"><img class="payment_icon icon_four" src="img/new/Blockcodes.png" alt="" style="width: 13%; margin-top: 40px; margin-right: 80px;"></a>
+                        <a href="" class="raLink"><img class="payment_icon icon_five" src="img/new/Raspora.png" alt="" style="width:12%; margin-right:100px; margin-top: 20px;"></a>
+                        <a href="" class="relyLink"><img class="payment_icon icon_six" src="img/new/Group 9.png" alt="" style="width:15%; margin-top: 75px; margin-right: 50px;"></a>
                     </div>
                 </div>
                 <div class="symbols-pulse active">
@@ -271,6 +270,26 @@
             </div>
         </footer>
     </div>
+
+    <script>
+
+        $(function() {
+            $('.apiLink').click(function(e){
+                e.preventDefault();
+            $("#laptopView").attr('src',"img/new/apiView.png");
+            
+            });
+        });
+
+        $(function() {
+            $('.satoLink').click(function(e){
+                e.preventDefault();
+            $("#laptopView").attr('src',"img/new/SatolearnLaptop.png");
+            
+            });
+        });
+
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
