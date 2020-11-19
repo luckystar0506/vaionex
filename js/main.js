@@ -219,9 +219,7 @@
         smartSpeed: 2000,
         stagePadding: 0,
         responsiveClass: true,
-        navText: [
-          '<i class="ti-angle-left"></i><i class="ti-angle-right"></i>',
-        ],
+        navText: ['<i class="ti-angle-left"></i><i class="ti-angle-right"></i>'],
         responsive: {
           0: {
             items: 1,
@@ -253,10 +251,7 @@
         smartSpeed: 2000,
         stagePadding: 0,
         responsiveClass: true,
-        navText: [
-          '<i class="ti-angle-left"></i>',
-          '<i class="ti-angle-right"></i>',
-        ],
+        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
         responsive: {
           0: {
             items: 1,
@@ -324,10 +319,7 @@
         dot: true,
         stagePadding: 0,
         navContainer: ".agency_testimonial_info",
-        navText: [
-          '<i class="ti-angle-left"></i>',
-          '<i class="ti-angle-right"></i>',
-        ],
+        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
       });
     }
   }
@@ -349,10 +341,7 @@
         responsiveClass: true,
         nav: true,
         dot: true,
-        navText: [
-          '<i class="ti-arrow-left"></i>',
-          '<i class="ti-arrow-right"></i>',
-        ],
+        navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
         navContainer: ".nav_container",
       });
     }
@@ -408,10 +397,7 @@
         responsiveClass: true,
         nav: true,
         dots: false,
-        navText: [
-          '<i class="ti-angle-left"></i>',
-          '<i class="ti-angle-right"></i>',
-        ],
+        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
         navContainer: ".pr_slider",
       });
     }
@@ -433,10 +419,7 @@
         responsiveClass: true,
         nav: true,
         dots: false,
-        navText: [
-          '<i class="ti-angle-left"></i>',
-          '<i class="ti-angle-right"></i>',
-        ],
+        navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
         navContainer: ".testimonial_title",
       });
     }
@@ -794,15 +777,13 @@
   if ($(".mailchimp").length > 0) {
     $(".mailchimp").ajaxChimp({
       callback: mailchimpCallback,
-      url:
-        "http://droitlab.us15.list-manage.com/subscribe/post?u=0fa954b1e090d4269d21abef5&id=a80b5aedb0", //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+      url: "http://droitlab.us15.list-manage.com/subscribe/post?u=0fa954b1e090d4269d21abef5&id=a80b5aedb0", //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
     });
   }
   if ($(".mailchimp_two").length > 0) {
     $(".mailchimp_two").ajaxChimp({
       callback: mailchimpCallback,
-      url:
-        "https://droitthemes.us19.list-manage.com/subscribe/post?u=5d334217e146b083fe74171bf&amp;id=0e45662e8c", //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+      url: "https://droitthemes.us19.list-manage.com/subscribe/post?u=5d334217e146b083fe74171bf&amp;id=0e45662e8c", //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
     });
   }
   $(".memail").on("focus", function () {
@@ -917,12 +898,7 @@
         $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
       },
     });
-    $("#amount").val(
-      "$" +
-        $("#slider-range").slider("values", 0) +
-        " - $" +
-        $("#slider-range").slider("values", 1)
-    );
+    $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
   }
 
   /*-------------------------------------------------------------------------------
@@ -1256,12 +1232,9 @@
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $("#landing_page ul .nav-item:not(.dropdown) .nav-link").on(
-    "click",
-    function () {
-      $(".navbar-collapse").collapse("hide");
-    }
-  );
+  $("#landing_page ul .nav-item:not(.dropdown) .nav-link").on("click", function () {
+    $(".navbar-collapse").collapse("hide");
+  });
 
   function fAqactive() {
     $(".faq_accordian_two .card").on("click", function () {
@@ -1271,3 +1244,8 @@
   }
   fAqactive();
 })(jQuery);
+
+//----------------------------dynamic application click view changer ----------------
+function onClickApplication(type) {
+  document.getElementById("laptopView").src = `img/new/${type}`;
+}
