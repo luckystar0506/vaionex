@@ -3179,9 +3179,9 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 /*=============== payment_banner_area_two css ==============*/
 .payment_banner_area_two {
-  background-image: -moz-linear-gradient(125deg, #5f51fb 0%, #767cfd 64%, #8ca7ff 100%);
-  background-image: -webkit-linear-gradient(125deg, #5f51fb 0%, #767cfd 64%, #8ca7ff 100%);
-  background-image: -ms-linear-gradient(125deg, #5f51fb 0%, #767cfd 64%, #8ca7ff 100%);
+  background-image: -moz-linear-gradient(125deg, #51e7fb 0%, #c076fd 64%, #1ed3e0 100%);
+  background-image: -webkit-linear-gradient(125deg, #51e7fb 0%, #c076fd 64%, #1ed3e0 100%);
+  background-image: -ms-linear-gradient(125deg, #51e7fb 0%, #c076fd 64%, #1ed3e0 100%);
   height: 100vh;
   min-height: 860px;
   padding-top: 200px;
