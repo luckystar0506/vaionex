@@ -1249,3 +1249,7 @@
 function onClickApplication(type) {
   document.getElementById("laptopView").src = `img/new/${type}`;
 }
+
+function onClickImageChange(type) {
+  document.getElementById("imgsec3").src = `img/Home-color/${type}`;
+}
