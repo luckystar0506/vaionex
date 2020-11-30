@@ -174,10 +174,9 @@
                         <div class="vertical-centred">
                             <div class="container">
                                 <div class="row flex-row-reverse">
-                                    <div class="col-lg-4" style="margin-top: 50px;">
+                                    <div class="col-lg-4" style="margin-top: 400px;">
                                         <div class="section_one_img">
                                             <div class="round p_absoulte"></div>
-                                            <img src="img/Home-color/iphone-x.png" alt="">
                                             <img class="p_absoulte dots" src="img/Home-color/dot_one.png" alt="">
                                         </div>
                                     </div>
@@ -234,20 +233,20 @@
                 </div>
             </div>
             <div class="pp-scrollable p-table section section-4" id="serviceSection">
-                <div class="scroll-wrap">
+                <div class="scroll-wrap" >
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
                     <img class="p_absoulte pp_block" src="img/Home-color/block2.png" alt="">
                     <div class="p-section-bg" style="background-image:url(./img/Home-color/background_4.png);"></div>
-                    <div class="scrollable-content">
+                    <div class="scrollable-content" style="margin-top: 100px;">
                         <div class="vertical-centred">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-5 col-sm-12">
                                         <div class="section_one_img">
                                             <div class="round p_absoulte"></div>
-                                            <img src="img/Home-color/tablet_03.png" alt="">
-                                            <img class="p_absoulte phon_img" src="img/Home-color/iphone-2.png" alt="">
+                                            <img id="imgsec3" src="img/Home-color/tablet_03.png" alt="">
+                                            
                                         </div>
                                     </div>
                                     <div class="col-lg-6 offset-lg-1 col-sm-12">
@@ -258,10 +257,10 @@
                                             </div>
                                             <div class="developer_product_content d_product_content_two" style="width: 100%">
                                                 <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist">
-                                                    <li class="nav-item active">
+                                                    <li class="nav-item active" onclick="onClickImageChange('tablet_03.png')">
                                                         <a class="nav-link active show" id="ruby-tab" style="color: #FEFEFE" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="false">Development</a>
                                                     </li>
-                                                    <li class="nav-item">
+                                                    <li class="nav-item" onclick="onClickImageChange('iphone-x.png')">
                                                         <a class="nav-link" id="curl-tab" data-toggle="tab"  style="color: #FEFEFE" href="#curl" role="tab" aria-controls="curl" aria-selected="false">Support</a>
                                                     </li>
                                                     <li class="nav-item">
@@ -388,6 +387,8 @@
             </div>
         </div>
     </form>
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
