@@ -1261,7 +1261,6 @@ function onClickApplication(type) {
     document.getElementById("laptopView").style.opacity = "1";
   }, 400);
 
-  // document.getElementsByClassName("payment_banner_area_two").style.opacity = "0";
 }
 
 function onClickImageChange(type) {
