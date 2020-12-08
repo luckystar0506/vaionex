@@ -1265,4 +1265,10 @@ function onClickApplication(type) {
 
 function onClickImageChange(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
+  document.getElementById("imgsec3").style.cssText = "width: 700px; margin-left:-75px ";
+}
+
+function onClickSupport(type) {
+  document.getElementById("imgsec3").src = `img/Home-color/${type}`;
+  document.getElementById("imgsec3").style.cssText = "width: 700px; margin-right: -400px";
 }
