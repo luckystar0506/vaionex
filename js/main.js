@@ -1247,17 +1247,10 @@
 
 //----------------------------dynamic application click view changer ----------------
 function onClickApplication(type) {
-  let btnsArray = ["apiView.png", "SatolearnLaptop.png", "blockView.png", "HiveView.png", "relyView.png"];
-  for (i = 0; i < btnsArray.length; i++) {
-    if (btnsArray[i] !== type) {
-      document.getElementById(btnsArray[i]).style.opacity = "0.7";
-    } else {
-      document.getElementById(btnsArray[i]).style.opacity = "1";
-    }
-  }
+  
+  
   document.getElementById("laptopView").style.opacity = "0";
   setTimeout(() => {
-    document.getElementById("laptopView").src = `img/new/${type}`;
     document.getElementById("laptopView").style.opacity = "1";
   }, 400);
 
@@ -1271,4 +1264,16 @@ function onClickImageChange(type) {
 function onClickSupport(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
   document.getElementById("imgsec3").style.cssText = "width: 700px; margin-right: -400px";
+}
+
+function satoClick() {
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489047767?autoplay=1&muted=1&loop=1&controls=0";
+}
+
+function apiClick() {
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489121011?autoplay=1&muted=1&loop=1&controls=0";
+}
+
+function hiveClick() {
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489158765?autoplay=1&muted=1&loop=1&controls=0";
 }

@@ -79,12 +79,18 @@
                     <h2>Next Generation <br><span>Blockchain Applications</span></h2>
                     <br>
                     <div class="payment_img">
-                        <img id="laptopView" src="img/new/clickLogo.png" alt="app homepage display" style="transition: opacity 0.4s ease-in-out; width:70%">
-                        <span id="apiView.png" onclick="onClickApplication('APIGif.gif');" style="cursor: pointer;"><img class="payment_icon icon_one" src="img/new/Group 8.png" alt="" style="width: 15%; margin-left: 80px; margin-top: 50px;"></span>
-                        <span id="SatolearnLaptop.png" onclick="onClickApplication('Sato1.gif');" style="cursor: pointer;"><img class="payment_icon icon_two" src="img/new/Satolearn.png" alt="" style="width: 15%; margin-top: 100px; margin-left: 40px;"></span>
-                        <span id="blockView.png" onclick="onClickApplication('blockView.png');" style="cursor: pointer;"><img class="payment_icon icon_four" src="img/new/Blockcodes.png" alt="" style="width: 13%; margin-top: 40px; margin-right: 80px;"></span>
-                        <span id="HiveView.png" onclick="onClickApplication('RasporaGif.gif');" style="cursor: pointer;"><img class="payment_icon icon_five" src="img/new/Raspora.png" alt="" style="width:12%; margin-right:100px; margin-top: 20px;"></span>
-                        <span id="relyView.png" onclick="onClickApplication('relyView.png');" style="cursor: pointer;"><img class="payment_icon icon_six" src="img/new/Group 9.png" alt="" style="width:15%; margin-top: 75px; margin-right: 50px;"></span>
+                        <div class="container">
+                                <div class="laptop-wrapper" style="margin-top: -100px;">
+                                    <iframe id="laptopView" src="" width="640" height="360" frameborder=“0” allowfullscreen allow=autoplay></iframe>
+                                </div>
+                        </div>
+                        <div style="padding-bottom: -30px;">
+                        <span id="apiView.png" onclick="onClickApplication(); apiClick();" style="cursor: pointer;"><img class="payment_icon icon_one" src="img/new/Group 8.png" alt="" style="width: 15%; margin-left: 80px; margin-top: 50px; "></span>
+                        <span id="SatolearnLaptop.png" onclick="onClickApplication(); satoClick();" style="cursor: pointer;"><img class="payment_icon icon_two" src="img/new/Satolearn.png" alt="" style="width: 15%; margin-top: 100px; margin-left: 40px; "></span>
+                        <span id="blockView.png" onclick="onClickApplication('blockView.png');" style="cursor: pointer;"><img class="payment_icon icon_four" src="img/new/Blockcodes.png" alt="" style="width: 13%; margin-top: 40px; margin-right: 80px; "></span>
+                        <span id="HiveView.png" onclick="onClickApplication(); hiveClick();" style="cursor: pointer;"><img class="payment_icon icon_five" src="img/new/Raspora.png" alt="" style="width:12%; margin-right:100px; margin-top: 20px; "></span>
+                        <span id="relyView.png" onclick="onClickApplication('relyView.png');" style="cursor: pointer;"><img class="payment_icon icon_six" src="img/new/Group 9.png" alt="" style="width:15%; margin-top: 75px; margin-right: 50px; "></span>
+                        </div>
                     </div>
                 </div>
                 <div class="symbols-pulse active">
