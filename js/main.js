@@ -1247,8 +1247,6 @@
 
 //----------------------------dynamic application click view changer ----------------
 function onClickApplication(type) {
-  
-  
   document.getElementById("laptopView").style.opacity = "0";
   setTimeout(() => {
     document.getElementById("laptopView").style.opacity = "1";
@@ -1258,7 +1256,7 @@ function onClickApplication(type) {
 
 function onClickImageChange(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
-  document.getElementById("imgsec3").style.cssText = "width: 700px; margin-left:-75px ";
+  document.getElementById("imgsec3").style.cssText = "width: 575px; ";
 }
 
 function onClickSupport(type) {
