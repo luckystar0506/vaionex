@@ -53,13 +53,12 @@ div.laptop-wrapper {
   height: 0;
 }
 div.laptop-wrapper iframe {
-  box-sizing: border-box;
-  background: url(https://i.stack.imgur.com/zZNgk.png) center center no-repeat;
+  background: url(../img/Home-color/blankLaptopFinal.png) center center no-repeat;
   background-size: contain;
-  padding: 11.9% 15.5% 14.8%;
+  padding: 9.5% 15.5% 4.8%;
   position: absolute;
-  top: 0;
   left: 0;
+  bottom:0;
   width: 100%;
   height: 100%;
 }

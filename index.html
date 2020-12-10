@@ -145,7 +145,7 @@
                                             <p>At Vaionex, we forge interactive user experiences. </br>
                                                 We create BSV applications that interconnect and offer third-party 
                                                  development services.</p>
-                                            <a href="#service" class="btn_scroll btn_hover">Services</a>
+                                            <a href="section-4" class="btn_scroll btn_hover">Services</a>
                                             <a href="applications.html" class="btn_scroll btn_hover">Products</a>
 
                                         </div>
@@ -232,8 +232,8 @@
                     </div>
                 </div>
             </div>
-            <div class="pp-scrollable p-table section section-4" >
-                <div class="scroll-wrap" id="service">
+            <div class="pp-scrollable p-table section section-4" data-page-index="3" >
+                <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
                     <img class="p_absoulte pp_block" src="img/Home-color/block2.png" alt="">
@@ -387,10 +387,17 @@
         </div>
     </form>
 
-    
+    <script>
+
+        $(function(){
+            $.scrollIt();
+        });
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="scrollIt.js" type="text/javascript"></script>
     <script src="js/propper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="vendors/wow/wow.min.js"></script>
