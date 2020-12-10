@@ -1277,3 +1277,7 @@ function apiClick() {
 function hiveClick() {
   document.getElementById("laptopView").src = "https://player.vimeo.com/video/489158765?autoplay=1&muted=1&loop=1&controls=0";
 }
+
+function blockClick() {
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489174516?autoplay=1&muted=1&loop=1&controls=0";
+}
