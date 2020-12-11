@@ -1261,7 +1261,7 @@ function onClickImageChange(type) {
 
 function onClickSupport(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
-  document.getElementById("imgsec3").style.cssText = "width: 700px; margin-right: -400px";
+  document.getElementById("imgsec3").style.cssText = "width: 575px;";
 }
 
 function satoClick() {
