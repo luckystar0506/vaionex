@@ -1265,11 +1265,11 @@ function onClickSupport(type) {
 }
 
 function satoClick() {
-  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489047767?autoplay=1&muted=1&loop=1&controls=0";
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489626269?autoplay=1&muted=1&loop=1&controls=0";
 }
 
 function apiClick() {
-  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489121011?autoplay=1&muted=1&loop=1&controls=0";
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489640825?autoplay=1&muted=1&loop=1&controls=0";
 }
 
 function hiveClick() {
