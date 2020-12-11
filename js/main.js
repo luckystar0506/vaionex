@@ -1277,5 +1277,5 @@ function hiveClick() {
 }
 
 function blockClick() {
-  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489174516?autoplay=1&muted=1&loop=1&controls=0";
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/489683508?autoplay=1&muted=1&loop=1&controls=0";
 }
