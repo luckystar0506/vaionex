@@ -3326,12 +3326,12 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   
 }
 .payment_content_two .payment_img .payment_icon.icon_one {
-  top: -20px;
+  top: 10px;
   left: -34px;
 }
 .payment_content_two .payment_img .payment_icon.icon_two {
   left: 20px;
-  top: 33%;
+  top: 38%;
 }
 .payment_content_two .payment_img .payment_icon.icon_three {
   top: 45%;
@@ -3340,11 +3340,11 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .payment_content_two .payment_img .payment_icon.icon_four {
   right: 0;
-  top: -29px;
+  top: 0;
 }
 .payment_content_two .payment_img .payment_icon.icon_five {
   right: -40px;
-  top: 195px;
+  top: 185px;
 }
 .payment_content_two .payment_img .payment_icon.icon_six {
   right: -20px;
