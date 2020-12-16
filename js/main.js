@@ -1256,12 +1256,17 @@ function onClickApplication(type) {
 
 function onClickImageChange(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
-  document.getElementById("imgsec3").style.cssText = "width: 575px; ";
+  document.getElementById("imgsec3").style.cssText = "width: 800px; ";
 }
 
 function onClickSupport(type) {
   document.getElementById("imgsec3").src = `img/Home-color/${type}`;
-  document.getElementById("imgsec3").style.cssText = "width: 575px;";
+  document.getElementById("imgsec3").style.cssText = "width: 700px;";
+}
+
+function onClickConsult(type) {
+  document.getElementById("imgsec3").src = `img/Home-color/${type}`;
+  document.getElementById("imgsec3").style.cssText = "width: 500px;";
 }
 
 function satoClick() {
