@@ -6100,7 +6100,8 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .symbols-pulse .pulse-x {
   will-change: transform;
-  animation: pulsate 3s infinite;
+  animation: pulsate 6s infinite;
+  animation-delay: 1.7s;
 }
 
 @keyframes pulsate {
