@@ -91,7 +91,7 @@
                                             <p>At Vaionex, we forge interactive user experiences. </br>
                                                 We create BSV applications that interconnect and offer third-party 
                                                  development services.</p>
-                                            <a href="section-4" class="btn_scroll btn_hover">Services</a>
+                                            <a id="scrollBtn" class="btn_scroll btn_hover">Services</a>
                                             <a href="applications.html" class="btn_scroll btn_hover">Products</a>
 
                                         </div>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pp-scrollable p-table section section-3" data-page-index="2">
+            <div class="pp-scrollable p-table section section-3" id="scrollField" data-page-index="2">
                 <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
@@ -331,11 +331,17 @@
             </div>
         </div>
     </form>
+	 <script>
+		var myEl = document.getElementById('scrollBtn');
 
-    <script>
+		myEl.addEventListener('click', function() {
+		    $(".pp-section").mCustomScrollbar({
+		        "scrollTo": "#scrollField",
+		      });
+		}, false);
 
-        
     </script>
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -357,6 +363,8 @@
     <script src="vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="vendors/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
