@@ -638,6 +638,20 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   background: #fbfbfd;
   box-shadow: none;
 }
+.app_btn2 {
+  box-shadow: 0px 20px 30px 0px rgba(12, 0, 46, 0.1);
+  background-color: #4069eb;
+  display: inline-block;
+  padding: 14px 40px;
+  color: #fff;
+  border-radius: 45px;
+  border: 1px solid #4069eb;
+}
+.app_btn2:hover {
+  color: #4069eb;
+  background: #fbfbfd;
+  box-shadow: none;
+}
 
 .gr_btn {
   font: 500 14px "Poppins", sans-serif;
