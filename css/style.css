@@ -9552,12 +9552,12 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   bottom: 40px;
 }
 
-.video_info {
+.video_info1 {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  background: linear-gradient(50deg, rgba(58, 43, 220, 0.9) 0%, rgba(23, 199, 189, 0.9) 100%);
+  background: url("../img/new/Placeholder.jpg") no-repeat;;
   background-size: cover;
   box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
   height: 450px;
@@ -9566,6 +9566,67 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   position: relative;
   z-index: 1;
 }
+
+.video_info2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: url("../img/new/raspora.jpg") no-repeat;;
+  background-size: cover;
+  box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
+  height: 450px;
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.video_info3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background:  url("../img/new/city.jpg") no-repeat;;
+  background-size: cover;
+  box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
+  height: 450px;
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.video_info4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background:  url("../img/new/apibg.png") no-repeat;;
+  background-size: cover;
+  box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
+  height: 450px;
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.video_info5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background:  url("../img/new/relybg.jpg") no-repeat;;
+  background-size: cover;
+  box-shadow: 0px 50px 70px 0px rgba(0, 11, 40, 0.24);
+  height: 450px;
+  max-width: 770px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
 .video_info h2 {
   position: absolute;
   top: 58%;
