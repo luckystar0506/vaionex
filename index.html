@@ -26,6 +26,33 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style> 
+        @media only screen and (min-width: 600px) {
+          .sectionTop{
+            margin-top:  400px;
+          }
+          .subSectionTop{
+            margin-top:  90px;
+          }
+          .rowSectionTop{
+            margin-top:  175px;
+          }
+          .mobileColor {
+            background-color:  blue;
+          }
+         
+        }
+         @media only screen and (max-width: 599px) {
+          .mobileColor {
+            background-color:  rgba(0,0,0,0.3);
+          }
+          .mobileHide {
+            display:  none;
+            visibility: hidden;
+          }
+           
+        }
+    </style>
 </head>
 <body>
     <div id="preloader" >
@@ -41,7 +68,7 @@
             <nav class="navbar navbar-expand-lg menu_one menu_four menu_poss menu_scroll" style="z-index: 999;">
                 <div class="container-fluid">
                     <a class="navbar-brand sticky_logo" href="#"><img src="img/VaionexLogo.png" alt="logo" style="width: 40%; margin-left: 100px;"></a>
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler collapsed logoStyle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
                             <span class="hamburger">
                                 <span></span>
@@ -84,7 +111,7 @@
                 <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
-                    <img class="p_absoulte pp_block" src="img/Home-color/block2.png" alt="">
+                    <img class="p_absoulte pp_block mobileHide" src="img/Home-color/block2.png" alt="">
                     <div class="p-section-bg" style="background-image:url(./img/Home-color/background_2.jpg);"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
@@ -122,19 +149,19 @@
                 <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
-                    <img class="p_absoulte pp_block" src="img/Home-color/block.png" alt="">
+                    <img class="p_absoulte pp_block mobileHide" src="img/Home-color/block.png" alt="">
                     <div class="p-section-bg" style="background-image:url(./img/Home-color/background_3.png);"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
                             <div class="container">
                                 <div class="row flex-row-reverse">
-                                    <div class="col-lg-4" style="margin-top: 400px; z-index: 1">
-                                        <div class="section_one_img">
+                                    <div class="col-lg-4 sectionTop " style="z-index: 1">
+                                        <div class="section_one_img ">
                                             <div class="round p_absoulte"></div>
                                             <img class="p_absoulte dots" src="img/Home-color/dot_one.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-8" style="margin-top: 90px; z-index: 999">
+                                    <div class="col-lg-8 subSectionTop" style=" z-index: 999">
                                         <div class="pp_features_info">
                                             <div class="hosting_title pp_sec_title">
                                                 <h3>Our Expertise</h3>
@@ -186,29 +213,29 @@
                     </div>
                 </div>
             </div>
-            <div class="pp-scrollable p-table section section-4" data-page-index="3" >
+            <div class="pp-scrollable p-table section section-4 " data-page-index="3" >
                 <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
-                    <img class="p_absoulte pp_block" src="img/Home-color/block2.png" alt="">
-                    <div class="p-section-bg" style="background-image:url(./img/Home-color/background_4.png);"></div>
-                    <div class="scrollable-content" style="margin-top: 100px; margin-right: -200px;">
-                        <div class="vertical-centred">
-                            <div class="container">
-                                <div class="row" style="margin-top: 175px;">
-                                    <div class="col-lg-4 col-sm-12" style="z-index: 1;">
+                    <img class="p_absoulte pp_block mobileHide" src="img/Home-color/block2.png" alt="">
+                    <div class="p-section-bg " style="background-image:url(./img/Home-color/background_4.png);"></div>
+                    <div class="scrollable-content subSectionTop " style="margin-right: -200px;">
+                        <div class="vertical-centred ">
+                            <div class="container ">
+                                <div class="row rowSectionTop">
+                                    <div class="col-lg-4 col-sm-12 " style="z-index: 1;">
                                         <div class="section_one_img">
-                                            <div class="round p_absoulte"></div>
-                                            <img id="imgsec3" src="img/Home-color/Group 1321.svg" alt="" style=" width: 600px;">
+                                            <div class="round p_absoulte "></div>
+                                            <img id="imgsec3" src="img/Home-color/Group 1321.svg"  style="width: 600px;">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 offset-lg-2 col-sm-12" style="z-index: 999;">
+                                    <div class="col-lg-6 offset-lg-2 col-sm-12 " style="z-index: 999;">
                                         <div class="pp_testimonial_info" >
                                             <div class="hosting_title pp_sec_title">
                                                 <h3>Our Services</h3>
                                                 <h2>What we offer</h2>
                                             </div>
-                                            <div class="developer_product_content d_product_content_two" >
+                                            <div class="developer_product_content d_product_content_two " >
                                                 <ul class="nav nav-tabs develor_tab mb-30" id="myTab2" role="tablist" style="width: 100%">
                                                     <li class="nav-item active" >
                                                         <a class="nav-link active show" id="ruby-tab" style="color: #FEFEFE" data-toggle="tab" href="#ruby" role="tab" aria-controls="ruby" aria-selected="false">Development</a>
@@ -244,7 +271,7 @@
                 <div class="scroll-wrap">
                     <div class="round_line three"></div>
                     <div class="round_line four"></div>
-                    <img class="p_absoulte pp_block" src="img/Home-color/block2.png" alt="">
+                    <img class="p_absoulte pp_block mobileHide" src="img/Home-color/block2.png" alt="">
                     <div class="p-section-bg" style="background-image:url(./img/Home-color/contact_bg.jpg);"></div>
                     <div class="scrollable-content">
                         <div class="vertical-centred">
@@ -275,7 +302,7 @@
                                            
                                         </div>
                                     </div>
-                                    <div><lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bp1bwvhv.json"  background="transparent"  speed="1"  style="width: 450px; height: 450px; margin-right: 65px; margin-left: 50px; margin-bottom: 50px;"  loop autoplay></lottie-player></div>
+                                    <div class="mobileHide"><lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bp1bwvhv.json"  background="transparent"  speed="1"  style="width: 450px; height: 450px; margin-right: 65px; margin-left: 50px; margin-bottom: 50px;"  loop autoplay></lottie-player></div>
                                 </div>
                             </div>
                         </div>
