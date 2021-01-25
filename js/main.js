@@ -1287,5 +1287,5 @@ function blockClick() {
 }
 
 function relyClick() {
-  document.getElementById("laptopView").src = "https://player.vimeo.com/video/492560792?autoplay=1&muted=1&loop=1&controls=0";
+  document.getElementById("laptopView").src = "https://player.vimeo.com/video/504434163?autoplay=1&muted=1&loop=1&controls=0";
 }
