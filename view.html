@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Blog - BlockScript Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="cdns/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/mainStyle.css" rel="stylesheet" />
+    <link href="css/view.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand fixed-top custom-nav">
+      <div class="container nav-con">
+        <h1>
+          <img href="/" src="./images/BSlogo.svg" style="width: 10%" />
+          <a class="navbar-brand nav-head" href="/">BlockScript</a>
+        </h1>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto nav-links">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./manage.html">Upload</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link selected-nav" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container my-4 home-con">
+      <div class="row" id="view-display-con" style="display: none">
+        <div class="view-con1">
+          <div class="view-main1">
+            <h1 id="view-title"></h1>
+            <h6 id="view-desc"></h6>
+            <p class="view-tag" id="view-tag"></p>
+          </div>
+          <div class="view-main2">
+            <img id="view-img" src="" alt="cover" />
+          </div>
+        </div>
+        <div id="view-content"></div>
+
+        <!-- //donate btns -->
+        <div>
+          <div class="donate-btns">
+            <h6 class="donate-view-head">
+              Donate
+             
+            </h6>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+              "
+            >
+              <div id="donate-money-button">
+                <div id="load-money-btn">Loading MoneyButton..</div>
+              </div>
+            </div>
+            <!-- <div id="donate-relysia-button">
+              <div
+                class="pay-button-root"
+                amount="[1]"
+                to='["1LRDF7WrgW1wLaQH383rR2SMuBrbG55Ni5"]'
+              ></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div id="view-display-loader">
+        <div
+          class="spinner-grow"
+          role="status"
+          id="loading-view-display-loader"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div id="loading-view-err-test" style="display: none"></div>
+      </div>
+    </div>
+
+    <!-- popover -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Upload Image</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="img-container">
+              <img
+                id="image"
+                src="https://avatars0.githubusercontent.com/u/3456749"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="crop">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="py-5 bg-light"
+      style="border-top: 1px solid rgb(218, 218, 218)"
+    >
+      <div class="footer_top_six">
+        <div class="container">
+          <div class="row" style="margin: auto">
+            <div class="col-lg-4 col-sm-6">
+              <div class="row navbrand">
+                <img class="nav-logo" href="/" src="./images/BSlogo.svg" />
+                <h1>
+                  <a class="navbar-brand nav-head" href="/">BlockScript</a>
+                </h1>
+                <p class="mt_40">
+                  Copyright © 2021 Design by <a href="#">Vaionex</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div>
+                <h3 class="nav-head">What we do</h3>
+                <ul class="list-unstyled f_list">
+                  <li><a href="/about.html">About</a></li>
+                  <li><a href="/manage.html">Upload</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div>
+                <h3 class="nav-head">Get in touch</h3>
+                <ul class="list-unstyled f_list">
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6">
+              <div class="f_widget social-widget">
+                <h3 class="nav-head">Follow Us</h3>
+                <div class="f_social_icon">
+                  <a
+                    href="https://www.facebook.com/vaionex"
+                    class="ti-facebook"
+                    style="color: rgb(0, 6, 85)"
+                  ></a>
+                  <a
+                    href="https://twitter.com/Vaionex_Corp"
+                    class="ti-twitter-alt"
+                    style="color: rgb(0, 6, 85)"
+                  ></a>
+                  <a
+                    href="https://vimeo.com/user124559269"
+                    class="ti-vimeo-alt"
+                    style="color: rgb(0, 6, 85)"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="cdns/jquery/jquery.min.js"></script>
+    <script src="cdns/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="cdns/axios/axios.js"></script>
+    <script src="cdns/moneybutton/moneybutton.js"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/pay-button-vaionexdev/o/js%2Findex.js?alt=media"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/viewPage.js"></script>
+  </body>
+</html>
