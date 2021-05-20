@@ -7393,11 +7393,13 @@ section.breadcrumb_area_two {
   bottom: 0;
 }
 .price_content .price_item .p_list {
-  padding: 30px 0px 20px;
+  padding-top: 5px;
 }
 .price_content .price_item .p_list li {
   font: 300 14px/40px "Poppins", sans-serif;
+  text-align: left;
   color: #505975;
+  height: 25px;
 }
 .price_content .price_item .p_list li i {
   padding-right: 10px;
@@ -7467,6 +7469,20 @@ section.breadcrumb_area_two {
   border-color: #dfdcfe;
 }
 
+
+:root {
+  --card-border-color: #fff;
+  --card-border-color-selected: #ff005eb8;
+}
+.price_item .card_field {
+  text-align: left;
+}
+.price_item .card_field .bold {
+  font-weight:bolder;
+}
+.price_item .card_field .p_list .card_field_item {
+  text-align: left;
+}
 
 /*=================== included_service_info_area css ===============*/
 .included_service_info_area {
@@ -10945,7 +10961,7 @@ section.breadcrumb_area_two {
   min-height: 120px;
   padding-top: 20px;
   padding-left: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 .optional_service_title {
   font-weight: bold;
@@ -10997,7 +11013,7 @@ section.breadcrumb_area_two {
 
 :root {
   --primary-color: #435fda;
-  --secondary-color: #ef5ea4;
+  --secondary-color: #5f54fd;
   --body-font-size: 16px;
   --line-height: 1.5;
   --content-width: 480px;
