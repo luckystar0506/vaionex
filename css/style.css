@@ -184,6 +184,21 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .f_size_15 {
   font-size: 15px;
 }
+.f_size_14 {
+  font-size: 14px;
+}
+.f_size_13 {
+  font-size: 13px;
+}
+.f_size_12 {
+  font-size: 12px;
+}
+.f_size_11 {
+  font-size: 11px;
+}
+.f_size_10 {
+  font-size: 10px;
+}
 
 .l_height60 {
   line-height: 60px;
@@ -328,6 +343,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .mb_30 {
   margin-bottom: -30px;
+}
+
+.mb_0 {
+  margin-bottom: 0px;
 }
 
 .mb-30 {
@@ -7365,7 +7384,7 @@ section.breadcrumb_area_two {
 .price_content .price_item {
   text-align: center;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
   padding: 20px 20px 15px;
   border: 1px solid #fff;
@@ -7391,13 +7410,13 @@ section.breadcrumb_area_two {
   top: 11px;
 }
 
-.price_content_two .price_item .check_tag {
+.price_content .price_item .check_tag {
   text-align: right;
   position: absolute;
-  top:10px;
-  right: 10px;
+  top:7px;
+  right: 7px;
 }
-.price_content_two .price_item .check_tag .ti-check-box {
+.price_content .price_item .check_tag .ti-check-box {
   color: var(--card-border-color-selected);
 }
 .price_content .price_item p {
@@ -7418,6 +7437,7 @@ section.breadcrumb_area_two {
 }
 .price_content .price_item .p_list {
   padding-top: 5px;
+  margin-bottom: 0px;
 }
 .price_content .price_item .p_list li {
   text-align: left;
@@ -7452,7 +7472,7 @@ section.breadcrumb_area_two {
 /*=================== pricing_area_two css ===============*/
 .pricing_area_two {
   background: #f6f7fa;
-  padding:50px 0 60px 0;
+  padding:50px 0 10px 0;
 }
 
 .price_content_two .price_item .tag {
@@ -7496,21 +7516,22 @@ section.breadcrumb_area_two {
 
 :root {
   --card-border-color: #fff;
-  --card-border-color-selected: #f24384;
+  --card-border-color-selected: #e93d3d;
 }
 
 .price_item .card_field {
   text-align: left;
-  font-weight: bold;
+  font-size: 16px;
   padding-top: 20px;
-}
-.price_item .card_field .bold {
-  font-weight:bolder;
 }
 .price_item .card_field .p_list .card_field_item {
   text-align: left;
 }
-
+.spliter {
+  border-bottom: solid #eeeeee;
+  border-width: 0.1px;
+  padding-top:10px;
+}
 /*=================== included_service_info_area css ===============*/
 .included_service_info_area {
   background: #f6f7fa;
@@ -11000,14 +11021,16 @@ section.breadcrumb_area_two {
   color:var(--text-color);
 }
 .service_title {
+  font-size:22px;
   font-weight: bold;
-  font-size:large;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 .service_describe {
   padding-bottom: 15px;
   word-wrap: break-word;
+  font-size:14px;
+  font-weight: 400;
 }
 
  .outer {
