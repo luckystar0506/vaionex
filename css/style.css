@@ -373,6 +373,26 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 90px;
 }
 
+.pl_0 {
+  padding-left: 0px;
+}
+
+.pl_3 {
+  padding-left: 3px;
+}
+
+.pl_5 {
+  padding-left: 5px;
+}
+
+.pl_7 {
+  padding-left: 7px;
+}
+
+.pl_10 {
+  padding-left: 10px;
+}
+
 .pl_20 {
   padding-left: 20px;
 }
@@ -419,6 +439,26 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .pr_20 {
   padding-right: 20px;
+}
+
+.pr_10 {
+  padding-right: 10px;
+}
+
+.pr_7 {
+  padding-right: 7px;
+}
+
+.pr_5 {
+  padding-right: 5px;
+}
+
+.pr_3 {
+  padding-right: 3px;
+}
+
+.pr_9 {
+  padding-right: 9px;
 }
 
 .pt_150 {
@@ -7387,6 +7427,7 @@ section.breadcrumb_area_two {
   border-radius: 8px;
   box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
   padding: 20px 20px 15px;
+  padding-left: 30px;
   border: 1px solid #fff;
   position: relative;
   overflow: hidden;
