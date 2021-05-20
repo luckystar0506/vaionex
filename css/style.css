@@ -39,6 +39,7 @@ Table of Content:
 20/ blog
 21/ footer
 
+
 =====================================================================*/
 /*====================================================*/
 /*=== fonts ====*/
@@ -142,9 +143,6 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   .container {
     max-width: 100%;
   }
-}
-.container.custom_container {
-  max-width: 1520px;
 }
 
 .f_size_50 {
@@ -405,7 +403,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .sec_pad {
-  padding: 120px 0px;
+  padding: 120px 0px 50px 0;
 }
 
 /*====================================================*/
@@ -479,6 +477,20 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   color: #fff;
 }
 
+.cost_panel {
+  font: 500 14px "Poppins", sans-serif;
+  color: #fff;
+  background: #7444fd;
+  border-radius: 3px;
+  padding: 15px 30px;
+  border: 1px solid #7444fd;  
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.cost_info_submit_area .submit_panel {
+  height:70px;
+}
 .btn_three {
   font: 500 14px "Poppins", sans-serif;
   color: #fff;
@@ -486,7 +498,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   border-radius: 3px;
   padding: 15px 30px;
   border: 1px solid #7444fd;
-  margin-top: 50px;
+  margin-top: 10px;
   transition: all 0.3s linear;
   cursor: pointer;
   display: inline-block;
@@ -494,6 +506,27 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .btn_three:hover {
   color: #7444fd;
   background: transparent;
+}
+
+
+.btn_add {
+  font: 500 14px "Poppins", sans-serif;
+  color: #fff;
+  background: #5f54fd;
+  border-radius: 3px;
+  padding: 15px 30px;
+  border: 1px solid #5f54fd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn_added {
+  display: inline-block;
+  background: transparent;
+  border-color: #5f54fd;
+  color: #5f54fd;
 }
 
 .agency_banner_btn {
@@ -3027,6 +3060,14 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   background: #fff;
 }
 
+/*=============== saas_breadcrumb_area_two css=================*/
+section.breadcrumb_area_two {
+	background-image: url('../img/new/background_2.jpg');
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*=============== saas_banner_area_two css ===============*/
 .saas_banner_area_two {
   position: relative;
@@ -4806,7 +4847,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 /*=============== software_featured_area css ===============*/
 .software_featured_area {
-  padding-top: 120px;
+  padding: 50px 0 50px 0;
 }
 
 .software_featured_item .s_icon {
@@ -6136,7 +6177,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .service_carousel {
-  padding-left: 155px;
+  padding-left: 110px;
   position: relative;
   z-index: 1;
 }
@@ -6191,7 +6232,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .prototype_service_area_two {
   background: #f8f8fc;
-  padding: 120px 0px 60px;
+  padding: 50px 0px 60px;
   position: relative;
   z-index: 1;
 }
@@ -7231,6 +7272,19 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   z-index: 3;
 }
 
+/*=================================================*/
+.text_panel .text_item {
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
+  padding: 50px 50px 40px;
+  border: 1px solid #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
 /*================= pricing_area css ==============*/
 .pricing_area {
   background: #fbfbfd;
@@ -7299,7 +7353,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   text-align: center;
   background-color: white;
   box-shadow: 0px 4px 6px 0px rgba(0, 11, 40, 0.1);
-  padding: 50px 50px 40px;
+  padding: 20px 20px 15px;
   border: 1px solid #fff;
   position: relative;
   overflow: hidden;
@@ -7318,8 +7372,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 .price_content .price_item .tag span {
   position: relative;
+  visibility: visible;
   top: 11px;
 }
+
 .price_content .price_item p {
   font-size: 16px;
   line-height: 22px;
@@ -7340,7 +7396,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding: 30px 0px 20px;
 }
 .price_content .price_item .p_list li {
-  font: 300 16px/40px "Poppins", sans-serif;
+  font: 300 14px/40px "Poppins", sans-serif;
   color: #505975;
 }
 .price_content .price_item .p_list li i {
@@ -7370,6 +7426,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 /*=================== pricing_area_two css ===============*/
 .pricing_area_two {
   background: #f6f7fa;
+  padding:50px 0 60px 0;
 }
 
 .price_content_two .price_item .tag {
@@ -7410,6 +7467,30 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   border-color: #dfdcfe;
 }
 
+
+/*=================== included_service_info_area css ===============*/
+.included_service_info_area {
+  background: #f6f7fa;
+  padding:20px 0 30px 0;
+}
+
+/*=================== optional_service_info_area css ===============*/
+.optional_service_info_area {
+  background: #f6f7fa;
+  padding:20px 0 20px 0;
+}
+
+/*=================== contact_info_area css ===============*/
+.contact_info_area {
+  background: #f6f7fa;
+  padding:30px 0 0 0;
+}
+
+/*=================== cost_info_submit_area css ===============*/
+.cost_info_submit_area {
+  background: #f6f7fa;
+  padding-bottom: 50px;
+}
 /*================== call_action_area css ================*/
 .call_action_area {
   min-height: 900px;
@@ -10842,6 +10923,246 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   background: transparent;
   color: #5e2ced;
 }
+
+.contact_form_box .text_box {
+  box-shadow: 0px 6px 8px 0px rgba(0, 11, 40, 0.2);
+  border: 2px solid #fff;
+}
+
+.contact_form_box .text_panel {
+  padding: 0 0 0 0;
+}
+
+.optional_service_label {
+  font-weight: bold;
+  color:#444;
+  padding: 0px 0 10px 0;
+}
+
+.service_panel {
+  box-shadow: 0px 6px 8px 0px rgba(0, 11, 40, 0.2);
+  border: 2px solid #fff;
+  min-height: 120px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+.optional_service_title {
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.service_title {
+  font-weight: bold;
+  font-size:large;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.sevice_describe {
+  padding-bottom: 15px;
+}
+
+ .outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: 50px;
+  margin-right: 50px;
+  /*whatever width you want*/
+}
+.service_state {
+  color: #1d1d1d;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.service_cost {
+  text-align: center;
+  color:#333;
+}
+
+:root {
+  --primary-color: #435fda;
+  --secondary-color: #ef5ea4;
+  --body-font-size: 16px;
+  --line-height: 1.5;
+  --content-width: 480px;
+  --background-color: #fff;
+  --background-color-secondary: #f8f8f9;
+  --text-color: #060914;
+  --text-color--muted: #71737f;
+  --line-color: #ededef;
+}
+
+.wrapper {
+  max-width: var(--content-width);
+  margin: calc(var(--line-height) * .5em) auto 0 auto;
+}
+
+.results {
+  margin-top: .5em;
+  text-align: center;
+}
+
+.results > div {
+  margin-bottom: .5em;
+}
+
+@media (min-width: 440px) {
+  :root {
+    --body-font-size: 18px;
+    --line-height: 1.5;
+  }
+
+  .results {
+    margin: 2em 1em 0 2em;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+  }
+  .results > div {
+    margin-bottom: 0;
+  }
+}
+
+.choose-gender {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 2em;
+}
+
+.segmented-control {
+  flex: 1;
+  text-align: center;
+  line-height: 2em;
+  border: 1px solid var(--line-color);
+}
+
+.segmented-control:first-child {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.segmented-control:last-child {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.results {
+  color: var(--text-color--muted);
+}
+
+.results span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* The crazy stuff that needs to be here for the custom input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+  transition: all 0.265ms ease-out;
+}
+
+input[type="range"]:not(:last-of-type) {
+  margin-top: 0;
+  margin-bottom: 2.5em;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  background: var(--line-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 8px 1px var(--secondary-color),
+    0 0 16px 4px var(--background-color);
+  border: 3px solid #fff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: var(--secondary-color);
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.segmented-control input[type="radio"] + label {
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  color: var(--text-color--muted);
+}
+
+.segmented-control input[type="radio"]:checked + label {
+  background-color: var(--line-color);
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--text-color);
+}
+
+.segmented-control input[type="radio"]:focus + label {
+  border: 1px solid var(--secondary-color);
+}
+
+.segmented-control:first-child input[type="radio"]:checked + label {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.segmented-control:last-child input[type="radio"]:checked + label {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: var(--line-color);
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 8px 1px var(--secondary-color),
+    0 0 16px 4px var(--background-color);
+  border: 3px solid #fff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+}
+
 
 .mapbox2 {
   height: 440px;
@@ -17794,7 +18115,23 @@ a .h_head:hover {
   color: #fff;
 }
 
-/*=========== section-2 css ============*/
+.btn_send {
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #c8c1fc;
+  padding: 9px 32px;
+  margin-top: 10px;
+  border-radius: 4px;
+  width: 180px;
+  display: inline-block;
+}
+.btn_send:hover {
+  background: #5f54fd;
+  border-color: #5f54fd;
+  box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
+  color: #fff;
+
+}/*=========== section-2 css ============*/
 .section-2 .pp_block {
   left: 0;
   right: auto;
@@ -17874,6 +18211,18 @@ a .h_head:hover {
   box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
 }
 .pp_work_content .btn_scroll:hover {
+  background: #5f54fd;
+  border-color: #5f54fd;
+  box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
+  transform: translateY(-10px);
+}
+
+.cost_info_submit_area .btn_send {
+  background: #5f54fd;
+  border-color: #5f54fd;
+  box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
+}
+.cost_info_submit_area .btn_send:hover {
   background: #5f54fd;
   border-color: #5f54fd;
   box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
