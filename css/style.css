@@ -251,7 +251,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .t_color2 {
-  color: #3f4451;
+  color: #222233;
 }
 
 .t_color3 {
@@ -518,12 +518,18 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   border: 1px solid #5f54fd;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
   transition: all 0.3s linear;
   cursor: pointer;
-  display: inline-block;
+  display: block;
 }
 .btn_added {
-  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   background: transparent;
   border-color: #5f54fd;
   color: #5f54fd;
@@ -6232,7 +6238,6 @@ section.breadcrumb_area_two {
 
 .prototype_service_area_two {
   background: #f8f8fc;
-  padding: 50px 0px 60px;
   position: relative;
   z-index: 1;
 }
@@ -7358,6 +7363,7 @@ section.breadcrumb_area_two {
   position: relative;
   overflow: hidden;
   transition: all 0.2s linear;
+  color:var(--text-color);
   cursor: pointer;
 }
 .price_content .price_item .tag {
@@ -7396,10 +7402,10 @@ section.breadcrumb_area_two {
   padding-top: 5px;
 }
 .price_content .price_item .p_list li {
-  font: 300 14px/40px "Poppins", sans-serif;
   text-align: left;
-  color: #505975;
-  height: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  color:var(--text-color);
 }
 .price_content .price_item .p_list li i {
   padding-right: 10px;
@@ -7473,9 +7479,13 @@ section.breadcrumb_area_two {
 :root {
   --card-border-color: #fff;
   --card-border-color-selected: #ff005eb8;
+  --card-border: '1px solid #fff';
+  --card-border-selected:'2px solid #ff005eb8';
 }
+
 .price_item .card_field {
   text-align: left;
+  font-weight: bold;
 }
 .price_item .card_field .bold {
   font-weight:bolder;
@@ -10951,7 +10961,7 @@ section.breadcrumb_area_two {
 
 .optional_service_label {
   font-weight: bold;
-  color:#444;
+  color:var(--text-color);
   padding: 0px 0 10px 0;
 }
 
@@ -10962,12 +10972,15 @@ section.breadcrumb_area_two {
   padding-top: 20px;
   padding-left: 50px;
   padding-bottom: 25px;
+  background-color: #fff;
+  color:var(--text-color);
 }
 .optional_service_title {
   font-weight: bold;
   font-size: x-large;
   margin-top: 20px;
   margin-bottom: 10px;
+  color:var(--text-color);
 }
 .service_title {
   font-weight: bold;
@@ -10975,8 +10988,9 @@ section.breadcrumb_area_two {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.sevice_describe {
+.service_describe {
   padding-bottom: 15px;
+  word-wrap: break-word;
 }
 
  .outer {
@@ -11019,7 +11033,7 @@ section.breadcrumb_area_two {
   --content-width: 480px;
   --background-color: #fff;
   --background-color-secondary: #f8f8f9;
-  --text-color: #060914;
+  --text-color: #223;
   --text-color--muted: #71737f;
   --line-color: #ededef;
 }
