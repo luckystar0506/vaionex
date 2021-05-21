@@ -295,8 +295,32 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   color: #263b5e;
 }
 
-.mt_60 {
-  margin-top: 60px;
+.ml_10 {
+  margin-left: 10px;
+}
+
+.ml_20 {
+  margin-left: 20px;
+}
+
+.ml_30 {
+  margin-left: 30px;
+}
+
+.ml_40 {
+  margin-left: 40px;
+}
+
+.ml_50 {
+  margin-left: 50px;
+}
+
+.ml_60 {
+  margin-left: 60px;
+}
+
+.ml_70 {
+  margin-left: 70px;
 }
 
 .mt_10 {
@@ -317,6 +341,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 
 .mt_50 {
   margin-top: 50px;
+}
+
+.mt_60 {
+  margin-top: 60px;
 }
 
 .mt_70 {
@@ -348,7 +376,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .mb_30 {
-  margin-bottom: -30px;
+  margin-bottom: 30px;
 }
 
 .mb_0 {
@@ -356,7 +384,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 }
 
 .mb-30 {
-  margin-bottom: 30px;
+  margin-bottom: -30px;
 }
 
 .mb_40 {
@@ -403,7 +431,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding-left: 20px;
 }
 
-.pl-30 {
+.pl_30 {
   padding-left: 30px;
 }
 
@@ -18342,13 +18370,29 @@ a .h_head:hover {
   width: 180px;
   display: inline-block;
 }
+
 .btn_send:hover {
   background: #5f54fd;
   border-color: #5f54fd;
   box-shadow: 0px 20px 50px 0px rgba(14, 6, 134, 0.2);
   color: #fff;
+}
 
-}/*=========== section-2 css ============*/
+.btn_normal {
+  font-size: 16px;
+  color: #fff;
+  background-color: #5f54fd;
+  border: 2px solid #5f54fd;  
+  padding: 9px 32px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+.btn_normal:hover {
+  color: #fff;
+}
+
+/*=========== section-2 css ============*/
 .section-2 .pp_block {
   left: 0;
   right: auto;
