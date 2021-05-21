@@ -7611,6 +7611,10 @@ section.breadcrumb_area_two {
   border-color: #c9ebfa;
   box-shadow: 0px 30px 60px 0px rgba(0, 11, 40, 0.14);
 }
+#user_describe {
+  line-height: 1.5;
+  padding-top:30px;
+}
 
 /*=================== pricing_area_two css ===============*/
 .pricing_area_two {

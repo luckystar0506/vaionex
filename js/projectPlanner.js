@@ -192,19 +192,13 @@ $(document).ready(function() {
     $('#btn_submit').on("click", function() {        
         confirm_dialog("Are you sure you want to submit?",
         function() {    // yes
-            writeUserData(
-                $("#user_name").val(),
-                $("#user_mail").val(),
-                $("#user_describe").val(),
-                feature_type,
-                added_maintenance === 1 ? maintenance_month : 0,
-                added_maintenance === 1 ? maintenance_hour : 0,
-                added_opfeature
-            );
+            
         },
         function() {    // no
         });
     });
+
+    
 
     function confirm_dialog(message, yesCallback, noCallback) {
         $(".message").html(message);
@@ -214,25 +208,48 @@ $(document).ready(function() {
         $("#d_maintanence").html(mat);
         $("#d_op_feature").html(added_opfeature == 1 ? "Yes" : "No");
         $("#d_cost_estimate span").html(new Intl.NumberFormat('en-US').format(estimate_cost));
+        
+        var req_confirm = 0;
         var d = $("#confirm_dialog").dialog();
         d.dialog("option", "width", 400);
+        
         $('#btnYes').on("click", function() {
-            d.dialog('close');
+          if (req_confirm != 0) return;
+          req_confirm = 1;
+          d.dialog('close');
+            writeUserData(
+              $("#user_name").val(),
+              $("#user_mail").val(),
+              $("#user_describe").val(),
+              feature_type,
+              added_maintenance === 1 ? maintenance_month : 0,
+              added_maintenance === 1 ? maintenance_hour : 0,
+              added_opfeature
+            );
             yesCallback();
         });
         $('#btnNo').on("click", function() {
-            d.dialog('close');
-            noCallback();
+          if (req_confirm != 0) return;
+          req_confirm = 1;
+          d.dialog('close');
+          noCallback();
         });
+    }
+
+    function makeKey(length) {
+      var result           = [];
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < length; i++ ) {
+        result.push(characters.charAt(Math.floor(Math.random() * charactersLength)));
+      }
+      return result.join('');
     }
 
     function writeUserData(user_name, user_mail, user_describe, feature_type, mt_month, mt_hour, op_feature) {
         var userId = "0BGKxnfaUoQ8CIx8UWhnskdB3S12";
-        var database = firebase.database();
-        var month = new Date().getMonth() + 1;
-        var node_name = new Date().getUTCFullYear() + "/"
-                    + month + "-" + new Date().getDate() + "/"
-                    + new Date().toTimeString();
+        var database = firebase.database();        
+        var node_name = makeKey(16);
         console.log(node_name);
         database.ref(node_name).set({
           user_name: user_name,
