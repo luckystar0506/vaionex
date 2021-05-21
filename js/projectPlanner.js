@@ -16,7 +16,7 @@ $(document).ready(function() {
     
     $('.slider').bxSlider();
 
-    var estimate_cost = 0;
+    var cost_estimate = 0;
     var feature_type = 0;
     var maintenance_month = 0;
     var maintenance_hour = 0;    
@@ -178,10 +178,10 @@ $(document).ready(function() {
     }
 
     function calc_estimate() {
-      estimate_cost = feature_cost(feature_type)
+      cost_estimate = feature_cost(feature_type)
               + (added_maintenance === 1 ? maintenance_month * maintenance_hour * 5 : 0)
               + (added_opfeature === 1 ? optional_feature_cost : 0);
-      $("#btn_estimate span").html(new Intl.NumberFormat('en-US').format(estimate_cost));
+      $("#btn_estimate span").html(new Intl.NumberFormat('en-US').format(cost_estimate));
     }
     calc_estimate();
 
@@ -207,7 +207,7 @@ $(document).ready(function() {
                     (maintenance_month + " months, " + maintenance_hour + " hours");
         $("#d_maintanence").html(mat);
         $("#d_op_feature").html(added_opfeature == 1 ? "Yes" : "No");
-        $("#d_cost_estimate span").html(new Intl.NumberFormat('en-US').format(estimate_cost));
+        $("#d_cost_estimate span").html(new Intl.NumberFormat('en-US').format(cost_estimate));
         
         var req_confirm = 0;
         var d = $("#confirm_dialog").dialog();
@@ -224,7 +224,8 @@ $(document).ready(function() {
               feature_type,
               added_maintenance === 1 ? maintenance_month : 0,
               added_maintenance === 1 ? maintenance_hour : 0,
-              added_opfeature
+              added_opfeature,
+              cost_estimate
             );
             yesCallback();
         });
@@ -246,7 +247,7 @@ $(document).ready(function() {
       return result.join('');
     }
 
-    function writeUserData(user_name, user_mail, user_describe, feature_type, mt_month, mt_hour, op_feature) {
+    function writeUserData(user_name, user_mail, user_describe, feature_type, mt_month, mt_hour, op_feature, cost_estimate) {
         var userId = "0BGKxnfaUoQ8CIx8UWhnskdB3S12";
         var database = firebase.database();        
         var node_name = makeKey(16);
@@ -258,7 +259,8 @@ $(document).ready(function() {
           feature_type : feature_type,
           mt_month : mt_month,
           mt_hour : mt_hour,
-          op_feature : op_feature
+          op_feature : op_feature,
+          cost_estimate : cost_estimate
         });
       }
   });
