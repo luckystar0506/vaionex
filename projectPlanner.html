@@ -457,17 +457,17 @@
                   <div class="row">
                       <div class="col-lg-4 text_panel" style="padding:0 20px 0 0">
                           <div class="form-group text_box">
-                              <input type="text" name="name" placeholder="Name">
+                              <input id="user_name" type="text" name="name" placeholder="Name">
                           </div>
                       </div>
                       <div class="col-lg-8 text_panel">
                           <div class="form-group text_box">
-                              <input type="text" name="email" placeholder="Contact Mail">
+                              <input id="user_mail" type="text" name="email" placeholder="Contact Mail">
                           </div>
                       </div>
                       <div class="col-lg-12 text_panel">
                           <div class="form-group text_box">
-                              <textarea name="message" cols="30" rows="10" placeholder="Describe your project"></textarea>
+                              <textarea id="user_describe" name="message" cols="30" rows="10" placeholder="Describe your project"></textarea>
                           </div>
                       </div>
                   </div>
@@ -540,9 +540,62 @@
 
     </div>
 
+    <div id="confirm_dialog">
+      <div>
+        <div class="row pl_50 pr_50 pt_20 pb_20">
+            <div>
+              <div class="f_p f_size_16 f_600">Feature Type:</div>
+              <div class="f_p f_size_16 f_600">Maintanence:</div>
+              <div class="f_p f_size_16 f_600">Optional Feature:</div>
+              <div class="f_p f_size_16 f_600">Cost Estimate:</div>
+            </div>
+            <div class="pl_7">
+              <div id="d_feature_type" class="f_p f_size_16 f_400 f_italic"></div>
+              <div id="d_maintanence" class="f_p f_size_16 f_400 f_italic"></div>
+              <div id="d_op_feature" class="f_p f_size_16 f_400 f_italic"></div>
+              <div id="d_cost_estimate" class="f_p f_size_16 f_400 f_italic">$<span></span></div>
+            </div>
+          <div class="message f_size_18 f_600 f_italic pl_10 pt_10 pb_60"></div>
+          <div>
+            <input type="button" class="btn_yesno" value="Yes" id="btnYes" />
+            <input type="button" class="btn_yesno" value="No" id="btnNo" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCX7gwIik0AL6-WbyEkzjU4XdRdiBaRWHU",
+        authDomain: "vaionex-projectplanner.firebaseapp.com",
+        databaseURL: "https://vaionex-projectplanner-default-rtdb.firebaseio.com",
+        projectId: "vaionex-projectplanner",
+        storageBucket: "vaionex-projectplanner.appspot.com",
+        messagingSenderId: "652261806480",
+        appId: "1:652261806480:web:d08da306a10f9d7e97e315",
+        measurementId: "G-1D568T3P5J"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <!-- Optional JavaScript -->
-     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/propper.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -555,160 +608,6 @@
     <script src="vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script>
-
-      $(document).ready(function() {
-        $('#item_starter').css('border', '2px solid var(--card-border-color-selected)');
-        $('#tag_starter').css('display', 'block');
-        $('#tag_essentials').css('display', 'none');
-        $('#tag_professionals').css('display', 'none');
-        $('#tag_advanced').css('display', 'none');
-        $('#i_service_1').css('display', 'block');
-        $('#i_service_2').css('display', 'none');
-        $('#i_service_3').css('display', 'block');
-        $('#i_service_4').css('display', 'none');
-        $('#i_service_5').css('display', 'none');
-        $('#i_service_6').css('display', 'none');        
-        
-        $('.slider').bxSlider();
-
-        var estimate_cost = 0;
-        var base_cost = 5000;
-        var maintenance_cost = 0;
-        var maintenance_month = 0;
-        var maintenance_hour = 0;
-        var option_cost = 2300;
-        var added_maintenance = 0;
-        var added_afeature = 0;
-        
-        $('#item_starter').click(function() {
-          base_cost = 5000;
-          $('#item_starter').css('border', '2px solid var(--card-border-color-selected)');
-          $('#item_essentials').css('border', '1px solid var(--card-border-color)');
-          $('#item_professionals').css('border', '1px solid var(--card-border-color)');
-          $('#item_advanced').css('border', '1px solid var(--card-border-color)');
-          $('#tag_starter').css('display', 'block');
-          $('#tag_essentials').css('display', 'none');
-          $('#tag_professionals').css('display', 'none');
-          $('#tag_advanced').css('display', 'none');
-          $('#i_service_1').css('display', 'block');
-          $('#i_service_2').css('display', 'none');
-          $('#i_service_3').css('display', 'block');
-          $('#i_service_4').css('display', 'none');
-          $('#i_service_5').css('display', 'none');
-          $('#i_service_6').css('display', 'none');
-          $(document).calc_estimate();
-        });
-        $('#item_essentials').click(function() {
-          base_cost = 7000;          
-          $('#item_starter').css('border', '1px solid var(--card-border-color)');
-          $('#item_essentials').css('border', '2px solid var(--card-border-color-selected)');
-          $('#item_professionals').css('border', '1px solid var(--card-border-color)');
-          $('#item_advanced').css('border', '1px solid var(--card-border-color)');
-          $('#tag_starter').css('display', 'none');
-          $('#tag_essentials').css('display', 'block');
-          $('#tag_professionals').css('display', 'none');
-          $('#tag_advanced').css('display', 'none');
-          $('#i_service_1').css('display', 'block');
-          $('#i_service_2').css('display', 'block');
-          $('#i_service_3').css('display', 'block');
-          $('#i_service_4').css('display', 'none');
-          $('#i_service_5').css('display', 'none');
-          $('#i_service_6').css('display', 'none');
-          $(document).calc_estimate();
-        });
-        $('#item_professionals').click(function() {
-          base_cost = 10000;
-          $('#item_starter').css('border', '1px solid var(--card-border-color)');
-          $('#item_essentials').css('border', '1px solid var(--card-border-color)');
-          $('#item_professionals').css('border', '2px solid var(--card-border-color-selected)');
-          $('#item_advanced').css('border', '1px solid var(--card-border-color)');
-          $('#tag_starter').css('display', 'none');
-          $('#tag_essentials').css('display', 'none');
-          $('#tag_professionals').css('display', 'block');
-          $('#tag_advanced').css('display', 'none');
-          $('#i_service_1').css('display', 'block');
-          $('#i_service_2').css('display', 'block');
-          $('#i_service_3').css('display', 'block');
-          $('#i_service_4').css('display', 'block');
-          $('#i_service_5').css('display', 'none');
-          $('#i_service_6').css('display', 'none');
-          $(document).calc_estimate();
-        });
-        $('#item_advanced').click(function() {
-          base_cost = 12000;
-          $('#item_starter').css('border', '1px solid var(--card-border-color)');
-          $('#item_essentials').css('border', '1px solid var(--card-border-color)');
-          $('#item_professionals').css('border', '1px solid var(--card-border-color)');
-          $('#item_advanced').css('border', '2px solid var(--card-border-color-selected)');
-          $('#tag_starter').css('display', 'none');
-          $('#tag_essentials').css('display', 'none');
-          $('#tag_professionals').css('display', 'none');
-          $('#tag_advanced').css('display', 'block');
-          $('#i_service_1').css('display', 'block');
-          $('#i_service_2').css('display', 'block');
-          $('#i_service_3').css('display', 'block');
-          $('#i_service_4').css('display', 'block');
-          $('#i_service_5').css('display', 'block');
-          $('#i_service_6').css('display', 'block');
-          $(document).calc_estimate();
-        });
-
-        $("#maintenance_month").on("input change", function (event) {
-          maintenance_month = $(this).val();
-          $("#maintenance_month_value span").html($(this).val());
-          maintenance_cost = maintenance_month * maintenance_hour * 5;
-          $("#maintenance_cost span").html(new Intl.NumberFormat('en-US').format(maintenance_cost));
-          $(document).calc_estimate();
-        });
-
-        $("#maintenance_hour").on("input change", function (event) {    
-          maintenance_hour = $(this).val();      
-          $("#maintenance_hour_value span").html($(this).val());
-          maintenance_cost = maintenance_month * maintenance_hour * 5;
-          $("#maintenance_cost span").html(new Intl.NumberFormat('en-US').format(maintenance_cost));
-          $(document).calc_estimate();
-        });
-
-        $('#mt_add').click(function() {
-          added_maintenance = (added_maintenance === 0 ? 1 : 0);
-          if (added_maintenance == 1) {
-            $('#mt_add').addClass('btn_added');
-            $('#mt_add').html("Remove");
-          }
-          else {
-            $('#mt_add').removeClass('btn_added');
-            $('#mt_add').html("Add");
-          }
-          $(document).calc_estimate();
-        });
-
-        $('#af_add').click(function() {
-          added_afeature = (added_afeature === 0 ? 1 : 0);
-          if (added_afeature == 1) {
-            $('#af_add').addClass('btn_added');
-            $('#af_add').html("Remove");
-          }
-          else {
-            $('#af_add').removeClass('btn_added');
-            $('#af_add').html("Add");
-          }
-          $(document).calc_estimate();
-        });
-
-        $.fn.calc_estimate = function() {
-          estimate_cost = base_cost
-                  + (added_maintenance === 1 ? maintenance_cost : 0)
-                  + (added_afeature === 1 ? option_cost : 0);
-          $("#btn_estimate span").html(new Intl.NumberFormat('en-US').format(estimate_cost));
-        }
-        $('#btn_estimate').click(function() {
-          $(document).calc_estimate();
-        });
-        $(document).calc_estimate();
-      });
-    </script>
-
-
+    <script src="js/projectPlanner.js"></script>
   </body>
 </html>
