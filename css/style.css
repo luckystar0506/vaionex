@@ -379,7 +379,7 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   margin-bottom: 30px;
 }
 
-.mb_0 {
+.mb-0 {
   margin-bottom: 0px;
 }
 
@@ -527,6 +527,10 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
   padding-top: 10px;
 }
 
+.pt_0 {
+  padding-top: 0px;
+}
+
 .pb_150 {
   padding-bottom: 150px;
 }
@@ -558,6 +562,29 @@ a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
 .pb_10 {
   padding-bottom: 10px;
 }
+.pb_0 {
+  padding-bottom: 0px;
+}
+
+
+.color_black {
+  color:#000
+}
+.color_white {
+  color:#fff;
+}
+.color_navy {
+  color:navy;
+}
+
+.bg_color_black {
+  background-color:#000
+}
+
+.bg_color_white {
+  background-color:#fff
+}
+
 
 .sec_pad {
   padding: 120px 0px 50px 0;
@@ -3492,7 +3519,7 @@ section.breadcrumb_area_two {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 9999; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -3507,8 +3534,12 @@ section.breadcrumb_area_two {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal-footer {
+  display: block;
+  border: none;
 }
 
 /* The Close Button */
@@ -7504,6 +7535,12 @@ section.breadcrumb_area_two {
   padding: 7px;
   justify-content: center;
   position: relative;
+}
+.nav-link {
+  cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .price_tab .nav-item {
   padding: 0px;

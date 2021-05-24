@@ -182,6 +182,12 @@ $(document).ready(function() {
               + (added_maintenance === 1 ? maintenance_month * maintenance_hour * 5 : 0)
               + (added_opfeature === 1 ? optional_feature_cost : 0);
       $("#btn_estimate span").html(new Intl.NumberFormat('en-US').format(cost_estimate));
+      $("#d_feature_type").html(feature_type_str(feature_type));
+      var mat = (added_maintenance == 0 || maintenance_month == 0 || maintenance_hour == 0) ? "No" :
+                  (maintenance_month + " months, " + maintenance_hour + " hours");
+      $("#d_maintanence").html(mat);
+      $("#d_op_feature").html(added_opfeature == 1 ? "Yes" : "No");
+      $("#d_cost_estimate span").html(new Intl.NumberFormat('en-US').format(cost_estimate));
     }
     calc_estimate();
 
@@ -189,53 +195,22 @@ $(document).ready(function() {
       calc_estimate();
     });
    
-    $('#btn_submit').on("click", function() {        
-        confirm_dialog("Are you sure you want to submit?",
-        function() {    // yes
-            
-        },
-        function() {    // no
-        });
+       
+    $('#btnSubmitConfirm').on("click", function() {
+//      if (req_confirm != 0) return;
+//      req_confirm = 1;
+//      d.dialog('close');
+        writeUserData(
+          $("#user_name").val(),
+          $("#user_mail").val(),
+          $("#user_describe").val(),
+          feature_type,
+          added_maintenance === 1 ? maintenance_month : 0,
+          added_maintenance === 1 ? maintenance_hour : 0,
+          added_opfeature,
+          cost_estimate
+        );
     });
-
-    
-
-    function confirm_dialog(message, yesCallback, noCallback) {
-        $(".message").html(message);
-        $("#d_feature_type").html(feature_type_str(feature_type));
-        var mat = (added_maintenance == 0 || maintenance_month == 0 || maintenance_hour == 0) ? "No" :
-                    (maintenance_month + " months, " + maintenance_hour + " hours");
-        $("#d_maintanence").html(mat);
-        $("#d_op_feature").html(added_opfeature == 1 ? "Yes" : "No");
-        $("#d_cost_estimate span").html(new Intl.NumberFormat('en-US').format(cost_estimate));
-        
-        var req_confirm = 0;
-        var d = $("#confirm_dialog").dialog();
-        d.dialog("option", "width", 400);
-        
-        $('#btnYes').on("click", function() {
-          if (req_confirm != 0) return;
-          req_confirm = 1;
-          d.dialog('close');
-            writeUserData(
-              $("#user_name").val(),
-              $("#user_mail").val(),
-              $("#user_describe").val(),
-              feature_type,
-              added_maintenance === 1 ? maintenance_month : 0,
-              added_maintenance === 1 ? maintenance_hour : 0,
-              added_opfeature,
-              cost_estimate
-            );
-            yesCallback();
-        });
-        $('#btnNo').on("click", function() {
-          if (req_confirm != 0) return;
-          req_confirm = 1;
-          d.dialog('close');
-          noCallback();
-        });
-    }
 
     function makeKey(length) {
       var result           = [];

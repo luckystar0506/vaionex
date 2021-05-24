@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <title>Vaionex</title>
-    <!-- Bootstrap CSS -->
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!--icon font css-->
@@ -485,7 +485,11 @@
                 <button id="btn_estimate" class="btn_send btn_hover submit_panel">Cost Estimate<br/>$<span>0</span></button>
               </div>
               <div class="col-lg-2">
-                <button id="btn_submit" class="btn_send btn_hover submit_panel">Submit Request</button>
+                <button id="btn_submit"
+                  type="button" 
+                  class="btn_send btn_hover submit_panel btn btn-primary" 
+                  data-toggle="modal" 
+                  data-target="#confirm_dialog">Submit Request</button>
               </div>
             </div>
           </div>        
@@ -537,29 +541,51 @@
 
     </div>
 
-    <div id="confirm_dialog" style="display: none;">
-      <div>
-        <div class="row pl_50 pr_50 pt_20 pb_20">
-            <div>
-              <div class="f_p f_size_16 f_600">Feature Type:</div>
-              <div class="f_p f_size_16 f_600">Maintanence:</div>
-              <div class="f_p f_size_16 f_600">Optional Feature:</div>
-              <div class="f_p f_size_16 f_600">Cost Estimate:</div>
+    <!-- popover -->
+    <div class="modal" id="confirm_dialog">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <div class="text-center mt_10">
+              <img src="img/email.png">
+              <div class="message f_size_20 f_600 pl_10 pt_20 color_black">Are you sure you want to submit?</div>
             </div>
-            <div class="pl_7">
-              <div id="d_feature_type" class="f_p f_size_16 f_400 f_italic"></div>
-              <div id="d_maintanence" class="f_p f_size_16 f_400 f_italic"></div>
-              <div id="d_op_feature" class="f_p f_size_16 f_400 f_italic"></div>
-              <div id="d_cost_estimate" class="f_p f_size_16 f_400 f_italic">$<span></span></div>
-            </div>
-          <div class="message f_size_18 f_600 f_italic pl_10 pt_10 pb_60"></div>
-          <div>
-            <input type="button" class="btn_yesno" value="Yes" id="btnYes" />
-            <input type="button" class="btn_yesno" value="No" id="btnNo" />
+            <div class="pl_30 pr_30 pt_20 pb_20 color_black">
+              <div class="row">
+                <div class="f_p f_size_14 f_500 col-lg-5">Feature Type:</div>
+                <div id="d_feature_type" class="f_p f_size_14 f_400 f_italic col-lg-4"></div>
+              </div>
+              <div class="row">
+                <div class="f_p f_size_14 f_500 col-lg-5">Maintanence:</div>
+                <div id="d_maintanence" class="f_p f_size_14 f_400 f_italic col-lg-4"></div>
+              </div>
+              <div class="row">
+                <div class="f_p f_size_14 f_500 col-lg-5">Additions:</div>
+                <div id="d_op_feature" class="f_p f_size_14 f_400 f_italic col-lg-4"></div>
+              </div>
+              <div class="row">
+                <div class="f_p f_size_14 f_500 col-lg-5">Cost Estimate:</div>
+                <div id="d_cost_estimate" class="f_p f_size_14 f_400 f_italic col-lg-4">$<span></span></div>
+              </div>
           </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer text-center pb_0 pt_0">
+            <ul class="list-unstyled f_list mb-0">
+              <li>
+                <button id="btnSubmitConfirm" type="button" class="btn_yesno" data-dismiss="modal">Submit now</button>
+              </li>
+              <li>
+                <div class="nav-link color_navy mt_10 pb_0" role="button" data-dismiss="modal"> No, I am not sure. </duv>
+              </li>
+            </div>
+          </div>
+          
         </div>
       </div>
-      
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
