@@ -153,16 +153,16 @@ $(document).ready(function() {
         var cost = 0;
         switch (feature_type) {
             case 0:
-                cost = 5000;
+                cost = 12000;
                 break;
             case 1:
-                cost = 7000;
+                cost = 30000;
                 break;
             case 2:
-                cost = 10000;
+                cost = 65000;
                 break;
             case 3:
-                cost = 12000;
+                cost = 115000;
                 break;
         }
         return cost;
