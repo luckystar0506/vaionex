@@ -9,10 +9,12 @@ $(document).ready(function() {
     $('#tag_advanced').css('display', 'none');
     $('#i_service_1').css('display', 'block');
     $('#i_service_2').css('display', 'none');
-    $('#i_service_3').css('display', 'block');
+    $('#i_service_3').css('display', 'none');
     $('#i_service_4').css('display', 'none');
     $('#i_service_5').css('display', 'none');
-    $('#i_service_6').css('display', 'none');        
+    $('#i_service_6').css('display', 'none');
+    $('#i_service_7').css('display', 'none');
+    $('#i_service_8').css('display', 'block');
     
     $('.slider').bxSlider();
 
@@ -38,10 +40,12 @@ $(document).ready(function() {
       $('#tag_advanced').css('display', 'none');
       $('#i_service_1').css('display', 'block');
       $('#i_service_2').css('display', 'none');
-      $('#i_service_3').css('display', 'block');
+      $('#i_service_3').css('display', 'none');
       $('#i_service_4').css('display', 'none');
       $('#i_service_5').css('display', 'none');
       $('#i_service_6').css('display', 'none');
+      $('#i_service_7').css('display', 'none');
+      $('#i_service_8').css('display', 'block');
       calc_estimate();
     });
     $('#item_essentials').on("click", function() {
@@ -56,10 +60,12 @@ $(document).ready(function() {
       $('#tag_advanced').css('display', 'none');
       $('#i_service_1').css('display', 'block');
       $('#i_service_2').css('display', 'block');
-      $('#i_service_3').css('display', 'block');
+      $('#i_service_3').css('display', 'none');
       $('#i_service_4').css('display', 'none');
       $('#i_service_5').css('display', 'none');
       $('#i_service_6').css('display', 'none');
+      $('#i_service_7').css('display', 'block');
+      $('#i_service_8').css('display', 'none');
       calc_estimate();
     });
     $('#item_professionals').on("click", function() {
@@ -75,9 +81,11 @@ $(document).ready(function() {
       $('#i_service_1').css('display', 'block');
       $('#i_service_2').css('display', 'block');
       $('#i_service_3').css('display', 'block');
-      $('#i_service_4').css('display', 'block');
+      $('#i_service_4').css('display', 'none');
       $('#i_service_5').css('display', 'none');
-      $('#i_service_6').css('display', 'none');
+      $('#i_service_6').css('display', 'block');
+      $('#i_service_7').css('display', 'none');
+      $('#i_service_8').css('display', 'none');
       calc_estimate();
     });
     $('#item_advanced').on("click", function() {
@@ -95,7 +103,9 @@ $(document).ready(function() {
       $('#i_service_3').css('display', 'block');
       $('#i_service_4').css('display', 'block');
       $('#i_service_5').css('display', 'block');
-      $('#i_service_6').css('display', 'block');
+      $('#i_service_6').css('display', 'none');
+      $('#i_service_7').css('display', 'none');
+      $('#i_service_8').css('display', 'none');
       calc_estimate();
     });
 
