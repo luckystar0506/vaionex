@@ -15,6 +15,7 @@ $(document).ready(function() {
     $('#i_service_6').css('display', 'none');
     $('#i_service_7').css('display', 'none');
     $('#i_service_8').css('display', 'block');
+    $('#i_service_9').css('display', 'none');
     
     $('.slider').bxSlider();
 
@@ -46,6 +47,7 @@ $(document).ready(function() {
       $('#i_service_6').css('display', 'none');
       $('#i_service_7').css('display', 'none');
       $('#i_service_8').css('display', 'block');
+      $('#i_service_9').css('display', 'none');
       calc_estimate();
     });
     $('#item_essentials').on("click", function() {
@@ -66,6 +68,7 @@ $(document).ready(function() {
       $('#i_service_6').css('display', 'none');
       $('#i_service_7').css('display', 'block');
       $('#i_service_8').css('display', 'none');
+      $('#i_service_9').css('display', 'none');
       calc_estimate();
     });
     $('#item_professionals').on("click", function() {
@@ -86,6 +89,8 @@ $(document).ready(function() {
       $('#i_service_6').css('display', 'block');
       $('#i_service_7').css('display', 'none');
       $('#i_service_8').css('display', 'none');
+      $('#i_service_8').css('display', 'none');
+      $('#i_service_9').css('display', 'block');
       calc_estimate();
     });
     $('#item_advanced').on("click", function() {
@@ -106,7 +111,9 @@ $(document).ready(function() {
       $('#i_service_6').css('display', 'none');
       $('#i_service_7').css('display', 'none');
       $('#i_service_8').css('display', 'none');
-      calc_estimate();
+      $('#i_service_8').css('display', 'none');
+      $('#i_service_9').css('display', 'block');     
+       calc_estimate();
     });
 
     $("#maintenance_month").on("input change", function (event) {
@@ -153,16 +160,16 @@ $(document).ready(function() {
         var cost = 0;
         switch (feature_type) {
             case 0:
-                cost = 12000;
+                cost = 15000;
                 break;
             case 1:
-                cost = 30000;
+                cost = 35000;
                 break;
             case 2:
-                cost = 65000;
+                cost = 75000;
                 break;
             case 3:
-                cost = 115000;
+                cost = 125000;
                 break;
         }
         return cost;
